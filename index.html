@@ -1,0 +1,133 @@
+    
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MediCare Hospital Management System</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+<header>
+    <h1>MediCare Hospital</h1>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#services">Services</a>
+        <a href="#login">Login</a>
+        <a href="#signup">Sign Up</a>
+        <a href="#appointment">Appointment</a>
+        <a href="#myAppointments">My Appointments</a>
+        <button id="logoutBtn" onclick="logout()" hidden>Logout</button>
+    </nav>
+</header>
+
+<section id="home" class="hero">
+    <h2>Welcome to MediCare Hospital</h2>
+    <p>Your health is our priority.</p>
+    <a href="#appointment" class="btn">Book an Appointment</a>
+</section>
+
+<section id="services" class="section">
+    <h2>Our Services</h2>
+    <div class="services">
+        <div class="service-card">
+            <h3>General Checkup</h3>
+            <p>Regular health checkups and consultations.</p>
+        </div>
+        <div class="service-card">
+            <h3>Cardiology</h3>
+            <p>Heart health consultation and care.</p>
+        </div>
+        <div class="service-card">
+            <h3>Emergency Care</h3>
+            <p>Medical assistance for urgent health needs.</p>
+        </div>
+    </div>
+</section>
+
+<section id="login" class="section">
+    <h2>Patient Login</h2>
+    <form id="loginForm">
+        <label for="loginEmail">Email</label>
+        <input type="email" id="loginEmail" required>
+
+        <label for="loginPassword">Password</label>
+        <input type="password" id="loginPassword" required>
+
+        <button type="submit">Login</button>
+        <p id="loginMessage" class="message"></p>
+    </form>
+</section>
+
+<section id="signup" class="section">
+    <h2>Create an Account</h2>
+    <form id="signupForm">
+        <label for="signupName">Full Name</label>
+        <input type="text" id="signupName" required>
+
+        <label for="signupEmail">Email</label>
+        <input type="email" id="signupEmail" required>
+
+        <label for="signupPassword">Password</label>
+        <input type="password" id="signupPassword" minlength="6" required>
+
+        <button type="submit">Sign Up</button>
+        <p id="signupMessage" class="message"></p>
+    </form>
+</section>
+
+<section id="appointment" class="section">
+    <h2>Book an Appointment</h2>
+    <p id="appointmentNotice">Please log in before booking an appointment.</p>
+
+    <form id="appointmentForm">
+        <label for="patientName">Patient Name</label>
+        <input type="text" id="patientName" required>
+
+        <label for="doctor">Select Doctor</label>
+        <select id="doctor" required>
+            <option value="">Choose a doctor</option>
+            <option value="Dr. Sharma">Dr. Sharma - General Physician</option>
+            <option value="Dr. Patel">Dr. Patel - Cardiologist</option>
+            <option value="Dr. Khan">Dr. Khan - Dentist</option>
+            <option value="Dr. Mehta">Dr. Mehta - Pediatrician</option>
+        </select>
+
+        <label for="appointmentDate">Appointment Date</label>
+        <input type="date" id="appointmentDate" required>
+
+        <label for="appointmentTime">Appointment Time</label>
+        <select id="appointmentTime" required>
+            <option value="">Choose a time</option>
+            <option value="09:00">09:00 AM</option>
+            <option value="10:00">10:00 AM</option>
+            <option value="11:00">11:00 AM</option>
+            <option value="12:00">12:00 PM</option>
+            <option value="14:00">02:00 PM</option>
+            <option value="15:00">03:00 PM</option>
+            <option value="16:00">04:00 PM</option>
+        </select>
+
+        <label for="reason">Reason for Visit</label>
+        <textarea id="reason" rows="3" required></textarea>
+
+        <button type="submit">Book Appointment</button>
+        <p id="appointmentMessage" class="message"></p>
+    </form>
+</section>
+
+<section id="myAppointments" class="section">
+    <h2>My Appointments</h2>
+    <div id="appointmentList">
+        <p>Please log in to view your appointments.</p>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2026 MediCare Hospital Management System</p>
+</footer>
+
+</body>
+</html>
